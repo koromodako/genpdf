@@ -1,0 +1,6 @@
+*.o
+*.pro.user
+moc_*
+genpdf
+Makefile
+.qmake.stash
