@@ -66,6 +66,8 @@ const QString URLRequestInterceptor::resourceTypeString(QWebEngineUrlRequestInfo
         return "Web Socket";
     case QWebEngineUrlRequestInfo::ResourceTypeUnknown:
         return "Unknown";
+    case QWebEngineUrlRequestInfo::ResourceTypeJson:
+        return "Json";
     }
     return "Unsupported";
 }
