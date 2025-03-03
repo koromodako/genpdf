@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     parser.addVersionOption();
     parser.addPositionalArgument("INPUT", "Path of the HTML file to process");
     parser.addPositionalArgument("OUTPUT", "Path of the PDF file to create");
-    parser.parse(QCoreApplication::arguments());
+    parser.process(app);
     const QStringList positionalArgs = parser.positionalArguments();
     if(positionalArgs.size() != 2)
     {
