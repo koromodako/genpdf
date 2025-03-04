@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     QCoreApplication::setApplicationName("genpdf");
-    QCoreApplication::setApplicationVersion("1.0.0");
+    QCoreApplication::setApplicationVersion("1.1.0");
     /* setup logging */
     qSetMessagePattern("%{time} [%{type}] %{message}");
     qInstallMessageHandler(messageHandler);
