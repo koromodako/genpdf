@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+PREFIX=example/QWebEngineView
+SOURCE="${PREFIX}.mhtml"
+
+function print_sep {
+    printf "\033[0;34m-------------------------------------------------------------------\033[0m\n"
+}
+
+if [[ ! -f ./genpdf ]]; then
+    echo "please perform qmake + make first!"
+    exit 1
+fi
+
+print_sep
+./genpdf -h
+print_sep
+./genpdf "${SOURCE}" "${PREFIX}.pdf"
+print_sep
+./genpdf --mt 1 "${SOURCE}" "${PREFIX}_mt_1.pdf"
+print_sep
+./genpdf --ml 1 "${SOURCE}" "${PREFIX}_ml_1.pdf"
+print_sep
+./genpdf --mr 1 "${SOURCE}" "${PREFIX}_mr_1.pdf"
+print_sep
+./genpdf --mb 1 "${SOURCE}" "${PREFIX}_mb_1.pdf"
+print_sep
+./genpdf --orientation landscape "${SOURCE}" "${PREFIX}_landscape.pdf"
+print_sep
+./genpdf --unit point "${SOURCE}" "${PREFIX}_point.pdf"
+print_sep
+./genpdf --size A0 "${SOURCE}" "${PREFIX}_A0.pdf"
+print_sep

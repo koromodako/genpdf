@@ -1,5 +1,6 @@
 *.o
 *.swp
+*.pdf
 *.pro.user
 moc_*
 genpdf
